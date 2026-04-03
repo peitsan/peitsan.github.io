@@ -1,154 +1,181 @@
-<script>
-
-import Header from './components/Header.vue'
-import Main from './components/Main.vue'
-import Footer from './components/Footer.vue'
-
-export default {
-  components: {
-    Header,
-    Main,
-    Footer,
-  }
-}
-
-</script>
-
 <template>
-    <div>
-      
-      <el-container>
-        <el-header><Header/></el-header>
-        <el-main><Main/></el-main>
-        <el-footer><Footer/></el-footer>
-      </el-container>
-      
-      <!-- 回到顶部 -->
-      <el-backtop :right="40" :bottom="80" />
-    </div>
+  <div class="academic-homepage">
+    <Title />
+    <Research />
+    <Publications />
+    <Contact />
+  </div>
 </template>
 
+<script setup>
+import Title from './components/sections/Title.vue'
+import Publications from './components/sections/Publications.vue'
+import Research from './components/sections/Research.vue'
+import Contact from './components/sections/Contact.vue'
+</script>
+
 <style>
-
-h1 {
-  font-family: "MyFont", Verdana, sans-serif;
-  letter-spacing: 2px;
-  font-size: 28px;
-  margin: 0px;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h2, h3, h4, h5, h6 {
-  font-family: "MyFont", Verdana, sans-serif;
-  letter-spacing: 2px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fafafa;
 }
 
-.el-header {
-  padding: 0px;
+.academic-homepage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.el-footer {
-  padding: 0px;
+section {
+  margin-bottom: 60px;
 }
 
-p, li {
-  font-size: 16px;
-  line-height: 1.75rem;
+section h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  border-bottom: 2px solid #42B883;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
 }
 
-code {
-  font-family: 'Consolas', monospace;
-  border-radius: 5px;
-  padding: 2px 5px;
-  background: #f2f2f2;
-  color: black;
+.paper-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
 }
 
-pre {
-  border-radius: 5px;
-  padding: 10px;
-  background: #f2f2f2;
-  line-height: 1.4rem;
+.paper-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
-pre:not(pre[id=bibtex]) {
-  overflow-x: auto;
+.paper-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
 }
 
-pre code {
-  font-size: 16px;
-  color: black;
-  border: none;
-  padding: 0px;
+.paper-authors {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
 }
 
-blockquote {
-  border-left: 5px solid #bcbcbc;
-  padding: 10px 20px 10px 20px;
-  margin: 0px;
-  background: #f6f6f6;
+.paper-authors .me {
+  color: #42B883;
+  font-weight: 600;
 }
 
-blockquote > p {
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
+.paper-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
 }
 
-/* 链接颜色装饰 */
-a {
-  color: #3273dc;
+.paper-abstract {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.paper-links .el-tag {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.res-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.res-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.res-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.res-desc {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.contact-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
 }
 
-/* 鼠标焦点悬浮在链接上的颜色装饰 */
-a:hover {
-  color: #848484;
-  border-bottom: dotted;
+.contact-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
-p > img {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px 1px #afafaf;
+.contact-item .el-icon {
+  font-size: 1.4rem;
+  color: #42B883;
 }
 
-table {
-  border-collapse: collapse;
-  width: max-content;
-  max-width: 100%;
-  margin: 0 auto;
-  display:block;
-  overflow-x:auto;
+.contact-item span {
+  font-size: 0.9rem;
+  color: #333;
 }
 
-thead {
-  border-bottom-width: 1px;
-  border-top-width: 2px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-style: solid;
-  border-color: rgb(0 0 0);
+@media (max-width: 600px) {
+  .res-card {
+    flex-direction: column;
+  }
+  .academic-homepage {
+    padding: 20px 12px;
+  }
 }
-
-tbody tr:last-child {
-  border-bottom-width: 2px;
-  border-top-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-style: solid;
-  border-color: rgb(0 0 0);
-}
-
-th, td {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
 </style>
