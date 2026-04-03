@@ -47,7 +47,7 @@
       <h3 class="address-title">📍 Office Address</h3>
       <p>
         Machine Intelligence Lab (MILab)<br />
-        School of Computer Science and Engineering<br />
+        School of Automation Science and Engineering<br />
         South China University of Technology<br />
         Guangzhou, Guangdong, China
       </p>
