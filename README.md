@@ -4,22 +4,6 @@
 
 🔗 **Live Site**: https://peitsan.github.io
 
-## 📚 Publications
-
-### Under Review
-- **OpenVLN: Open-world Aerial Vision-Language Navigation**  
-  *Peican Lin*, Gan Sun, Chenxi Liu, Fazeng Li, Weihong Ren, Yang Cong  
-  arXiv:2511.06182 · Under Review
-
-### Conference Papers
-- **PathwiseRAG: Multi-Dimensional Exploration and Integration Framework**  
-  Hengrui Zhang, Pin-Siang Huang, Zhen Zhang, *Peican Lin*, Yao-Ching Yu, Bo Hu, Yulu Du  
-  EMNLP 2025, Suzhou, China
-
-### Extended Abstracts
-- **Lightweight Magnetic-Field SLAM via Action Feedback**  
-  *Peican Lin*, Gan Sun, Fazeng Li, Weihong Ren, Yang Cong  
-  ICAIS-ISAS 2025
 
 ## 🚀 Quick Start
 
