@@ -101,6 +101,21 @@
 <script setup>
 import { ElMessage } from 'element-plus'
 const underReviewPapers = [
+{
+  "title": "Fed3D: Federated 3D Object Detection",
+  "authors": [
+    { "name": "Suyan Dai", "me": false },
+    { "name": "Chenxi Liu", "me": false },
+    { "name": "Fazeng Li", "me": false },
+    { "name": "Peican Lin", "me": true }
+  ],
+  "arxiv": "2604.15795",
+  "arxivUrl": "https://arxiv.org/abs/2604.15795",
+  "pdfUrl": "https://arxiv.org/pdf/2604.15795.pdf",
+  "codeUrl": "",
+  "comments": "",
+  "abstract": "3D object detection models trained in one server plays an important role in autonomous driving, robotics manipulation, and augmented reality scenarios. However, most existing methods face severe privacy concern when deployed on a multi-robot perception network to explore large-scale 3D scene. Meanwhile, it is highly challenging to employ conventional federated learning methods on 3D object detection scenes, due to the 3D data heterogeneity and limited communication bandwidth. In this paper, we take the first attempt to propose a novel Federated 3D object detection framework (i.e., Fed3D), to enable distributed learning for 3D object detection with privacy preservation. Specifically, considering the irregular input 3D object in local robot and various category distribution between robots could cause local heterogeneity and global heterogeneity, respectively. We then propose a local-global class-aware loss for the 3D data heterogeneity issue, which could balance gradient back-propagation rate of different 3D categories from local and global aspects. To reduce communication cost on each round, we develop a federated 3D prompt module, which could only learn and communicate the prompts with few learnable parameters. To the end, several extensive experiments on federated 3D object detection show that our Fed3D model significantly outperforms state-of-the-art algorithms with lower communication cost when providing the limited local training data."
+},
   {
     title: 'OpenVLN: Open-world Aerial Vision-Language Navigation',
     authors: [
