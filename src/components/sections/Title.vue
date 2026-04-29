@@ -27,6 +27,7 @@
         I am a Ph.D. candidate at the
         <a href="https://www2.scut.edu.cn/MachineIntelligenceLab" target="_blank">Machine Intelligence Lab (MILab)</a>.
         <a href="https://www.scut.edu.cn" target="_blank">South China University of Technology</a>
+      </p>
       <p>
         My research focuses on <strong>Aerial Vision-Language Navigation</strong>,
         <strong>UAV Systems</strong>, and <strong>vSLAM</strong>.
